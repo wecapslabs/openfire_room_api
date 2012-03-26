@@ -55,27 +55,19 @@ private
   end
 
   def submit_request(params)
-    puts "Submit Request with [params]:"
-    ap params
     data = submit_http_request(build_query_uri, build_query_params(params))
     parse_response(data)
   end
 
   def submit_http_request(uri, params)
-    puts "Here we submit the http request [uri]: #{uri}:"
-    ap params
     http = Net::HTTP.new(uri.host, uri.port)
     resp = http.get("#{uri.path}?#{params}")
-    puts "Testing the resp and data:"
-    ap resp.body
     return resp.body
   rescue Exception => e
     raise HTTPException, e.to_s
   end
 
   def parse_response(data)
-    puts "Testing"
-    ap data
     error = data.match(/<error>(.*)<\/error>/)
     if error && @@api_exceptions.include?(error[1])
       raise eval("#{error[1].gsub('Exception', '')}Exception")
