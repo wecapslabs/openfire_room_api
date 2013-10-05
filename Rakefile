@@ -11,12 +11,12 @@ require 'rake'
 
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
-  gem.name = "openfire_api"
-  gem.homepage = "http://github.com/paulasmuth/openfire_api"
-  gem.summary = %Q{ruby client for the openfire userservice api}
-  gem.description = %Q{ruby client for the openfire xmpp-server user_service api}
-  gem.email = "paul@23linesofcode.com"
-  gem.authors = ["Paul Asmuth"]
+  gem.name = "openfire_room_api"
+  gem.homepage = "https://github.com/wecapslabs/openfire_room_api"
+  gem.summary = %Q{ruby client for the openfire roomservice api}
+  gem.description = %Q{ruby client for the openfire xmpp-server room_service api}
+  gem.email = "flyerhzm@gmail.com"
+  gem.authors = ["Richard Huang"]
 end
 Jeweler::RubygemsDotOrgTasks.new
 

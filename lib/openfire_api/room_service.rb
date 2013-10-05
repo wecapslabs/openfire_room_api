@@ -1,40 +1,25 @@
-require "awesome_print"
+class OpenfireApi::RoomService
 
-class OpenfireApi::UserService
-
-  @@api_path = "plugins/userService/userservice"
-  @@api_exceptions = %w(UserServiceDisabled RequestNotAuthorised IllegalArgumentException UserNotFoundException UserAlreadyExistsException)
+  @@api_path = "plugins/roomService/roomservice"
+  @@api_exceptions = %w(RoomServiceDisabled RequestNotAuthorised NotAllowedException IllegalArgumentException)
 
   class HTTPException < StandardError; end
   class InvalidResponseException < StandardError; end
-  class UserServiceDisabledException < StandardError; end
+  class RoomServiceDisabledException < StandardError; end
   class RequestNotAuthorisedException < StandardError; end
+  class NotAllowedException < StandardError; end
   class IllegalArgumentException < StandardError; end
-  class UserNotFoundException < StandardError; end
-  class UserAlreadyExistsException < StandardError; end
 
   def initialize(options=Hash.new)
     @options = { :path => @@api_path }.merge(options)
   end
 
-  def add_user!(opts)
+  def add_room!(opts)
     submit_request(opts.merge(:type => :add))
   end
 
-  def delete_user!(opts)
+  def delete_room!(opts)
     submit_request(opts.merge(:type => :delete))
-  end
-
-  def update_user!(opts)
-    submit_request(opts.merge(:type => :update))
-  end
-
-  def lock_user!(opts)
-    submit_request(opts.merge(:type => :disable))
-  end
-
-  def unlock_user!(opts)
-    submit_request(opts.merge(:type => :enable))
   end
 
 private
