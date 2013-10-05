@@ -12,7 +12,7 @@ In your Gemfile
 
 create a new roomservice object
 
-  api = OpenfireApi::RoomService.new(:url => "http://localhost:9090/", :secret => "BIGSECRET")
+  api = OpenfireRoomApi::RoomService.new(:url => "http://localhost:9090/", :secret => "BIGSECRET")
 
 create a new room
 

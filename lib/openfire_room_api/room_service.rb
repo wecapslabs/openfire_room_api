@@ -1,4 +1,4 @@
-class OpenfireApi::RoomService
+class OpenfireRoomApi::RoomService
 
   @@api_path = "plugins/roomService/roomservice"
   @@api_exceptions = %w(RoomServiceDisabled RequestNotAuthorised NotAllowedException IllegalArgumentException)
