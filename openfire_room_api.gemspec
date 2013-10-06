@@ -31,32 +31,25 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rubygems_version = "2.0.6"
   s.summary = "ruby client for the openfire roomservice api"
-  s.test_files = [
-    "spec/room_service_spec.rb",
-    "spec/spec_helper.rb"
-  ]
 
   if s.respond_to? :specification_version then
     s.specification_version = 4
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<rspec>, [">= 2.6.0"])
+      s.add_development_dependency(%q<rspec>, [">= 0"])
       s.add_development_dependency(%q<shoulda>, [">= 0"])
-      s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
-      s.add_development_dependency(%q<jeweler>, ["~> 1.5.2"])
+      s.add_development_dependency(%q<jeweler>, [">= 0"])
       s.add_development_dependency(%q<fakeweb>, [">= 0"])
     else
-      s.add_dependency(%q<rspec>, [">= 2.6.0"])
+      s.add_dependency(%q<rspec>, [">= 0"])
       s.add_dependency(%q<shoulda>, [">= 0"])
-      s.add_dependency(%q<bundler>, ["~> 1.0.0"])
-      s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
+      s.add_dependency(%q<jeweler>, [">= 0"])
       s.add_dependency(%q<fakeweb>, [">= 0"])
     end
   else
-    s.add_dependency(%q<rspec>, [">= 2.6.0"])
+    s.add_dependency(%q<rspec>, [">= 0"])
     s.add_dependency(%q<shoulda>, [">= 0"])
-    s.add_dependency(%q<bundler>, ["~> 1.0.0"])
-    s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
+    s.add_dependency(%q<jeweler>, [">= 0"])
     s.add_dependency(%q<fakeweb>, [">= 0"])
   end
 end
