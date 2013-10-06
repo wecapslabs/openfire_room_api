@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Richard Huang"]
-  s.date = "2013-10-05"
+  s.date = "2013-10-06"
   s.description = "ruby client for the openfire xmpp-server room_service api"
   s.email = "flyerhzm@gmail.com"
   s.extra_rdoc_files = [
@@ -21,19 +21,19 @@ Gem::Specification.new do |s|
     "README.md",
     "Rakefile",
     "VERSION",
-    "lib/openfire_api.rb",
-    "lib/openfire_api/room_service.rb",
+    "lib/openfire_room_api.rb",
+    "lib/openfire_room_api/room_service.rb",
     "openfire_room_api.gemspec",
-    "spec/spec_helper.rb",
-    "spec/user_service_spec.rb"
+    "spec/room_service_spec.rb",
+    "spec/spec_helper.rb"
   ]
   s.homepage = "https://github.com/wecapslabs/openfire_room_api"
   s.require_paths = ["lib"]
   s.rubygems_version = "2.0.6"
   s.summary = "ruby client for the openfire roomservice api"
   s.test_files = [
-    "spec/spec_helper.rb",
-    "spec/user_service_spec.rb"
+    "spec/room_service_spec.rb",
+    "spec/spec_helper.rb"
   ]
 
   if s.respond_to? :specification_version then
